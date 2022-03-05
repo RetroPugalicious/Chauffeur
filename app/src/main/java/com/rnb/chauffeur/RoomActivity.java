@@ -6,12 +6,16 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
 public class RoomActivity extends AppCompatActivity {
 
     String role = "undetermined";
+    Handler handler = new Handler();
+    Runnable runnable;
+    int delay = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,23 @@ public class RoomActivity extends AppCompatActivity {
             replaceFragment(new LeaderFragment());
         else
             errorText.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    protected void onResume() {
+        handler.postDelayed(runnable = new Runnable() {
+            public void run() {
+                handler.postDelayed(runnable, delay);
+                System.out.println("Method run!");
+            }
+        }, delay);
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        handler.removeCallbacks(runnable);
+        super.onPause();
     }
 
     private void replaceFragment(Fragment fragment) {
