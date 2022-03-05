@@ -3,8 +3,10 @@
     <string name="app_description">Let us show you around!</string>
     <string name="soloStart">Solo</string>
     <string name="partyStart">Party</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="rangeSelection">How far do you want to travel?</string>
     <string name="PLACEHOLDER">PLACEHOLDER</string>
+    <string name="roomCodeHint">Room Code</string>
+    <string name="enterCodePrompt">Enter Party Room Code</string>
+    <string name="join_party">Join Party</string>
 </resources>
