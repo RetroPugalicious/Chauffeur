@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Chauffeur</string>
+    <string name="app_description">Let us show you around!</string>
+    <string name="soloStart">Solo</string>
+    <string name="partyStart">Party</string>
 </resources>
