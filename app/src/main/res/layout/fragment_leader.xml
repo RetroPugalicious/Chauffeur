@@ -44,4 +44,92 @@
         app:layout_constraintTop_toBottomOf="@id/rangeSlider"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/entertainmentCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/entertainment_categories"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rangeDisplay"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <CheckBox
+        android:id="@+id/aeCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/arts_amp_entertainment"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/entertainmentCategories"/>
+    <CheckBox
+        android:id="@+id/bsCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/beauty_amp_spas"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aeCheckbox"/>
+    <CheckBox
+        android:id="@+id/fCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/food"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bsCheckbox"/>
+    <CheckBox
+        android:id="@+id/nCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nightlife"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fCheckbox"/>
+    <CheckBox
+        android:id="@+id/rCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/restaurants"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nCheckbox"/>
+    <CheckBox
+        android:id="@+id/sCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shopping"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rCheckbox"/>
+
+    <Button
+        android:id="@+id/beginSearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sCheckbox"
+        android:text="@string/begin_search"
+        >
+    </Button>
+
+    <TextView
+        android:id="@+id/leaderList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/leader"
+        app:layout_constraintTop_toBottomOf="@id/beginSearchButton" />
+
+    <TextView
+        android:id="@+id/memberList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/members"
+        app:layout_constraintTop_toBottomOf="@id/leaderList" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

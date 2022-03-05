@@ -9,4 +9,16 @@
     <string name="roomCodeHint">Room Code</string>
     <string name="enterCodePrompt">Enter Party Room Code</string>
     <string name="join_party">Join Party</string>
+    <string name="error">ERROR</string>
+    <string name="waiting_for_leader">Waiting for leader…</string>
+    <string name="leader">Leader:</string>
+    <string name="members">Members:</string>
+    <string name="entertainment_categories">Entertainment Categories</string>
+    <string name="arts_amp_entertainment"><![CDATA[Arts & Entertainment]]></string>
+    <string name="beauty_amp_spas"><![CDATA[Beauty & Spas]]></string>
+    <string name="food">Food</string>
+    <string name="nightlife">Nightlife</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="shopping">Shopping</string>
+    <string name="begin_search">Begin Search</string>
 </resources>
