@@ -9,6 +9,7 @@ from api.More import More
 from api.Yes import Yes
 from api.AddUser import AddUser
 from api.PageCall import PageCall
+from api.GetCalls import GetCalls
 
 app = Flask(__name__)
 api = Api(app)
@@ -22,6 +23,7 @@ api.add_resource(Yes, '/yes/<string:room>/<string:business_id>', resource_class_
 api.add_resource(Create, '/create/', resource_class_kwargs={'rooms': roomlist})
 api.add_resource(AddUser, '/join/<string:room>', resource_class_kwargs={'rooms': roomlist})
 api.add_resource(PageCall, '/display/<string:room>', resource_class_kwargs={'rooms': roomlist})
+api.add_resource(GetCalls, '/getCalls/<string:room>', resource_class_kwargs={'rooms': roomlist})
 
 if __name__ == '__main__':
     app.run(debug=False, host="0.0.0.0")
