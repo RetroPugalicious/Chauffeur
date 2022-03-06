@@ -27,4 +27,7 @@
     <string name="place_name">Place Name</string>
     <string name="alias">Alias</string>
     <string name="description">Description</string>
+    <string name="distance">Distance</string>
+    <string name="miles">" miles"</string>
+    <string name="ten_miles">10 miles</string>
 </resources>

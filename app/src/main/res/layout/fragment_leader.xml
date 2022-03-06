@@ -17,15 +17,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.slider.Slider
+    <SeekBar
         android:id="@+id/rangeSlider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:valueFrom="1.0"
-        android:valueTo="25.0"
-        android:stepSize="1.0"
-        android:value="10.0"
+        android:max="25"
+        android:progress="10"
         app:layout_constraintTop_toTopOf="@id/rangeSelectionText"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

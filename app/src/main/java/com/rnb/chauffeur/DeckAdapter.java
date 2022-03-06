@@ -53,7 +53,7 @@ public class DeckAdapter extends BaseAdapter {
         }
         // on below line we are initializing our variables and setting data to our variables.
         ((TextView) v.findViewById(R.id.cardPlaceName)).setText(placeData.get(position).getCourseName());
-        ((TextView) v.findViewById(R.id.cardPlaceDescription)).setText(placeData.get(position).getCourseDescription());
+        ((TextView) v.findViewById(R.id.cardPlaceDistance)).setText(placeData.get(position).getCourseDescription());
         ((TextView) v.findViewById(R.id.cardPlaceRating)).setText(placeData.get(position).getCourseDuration());
         ((TextView) v.findViewById(R.id.cardPlacePrice)).setText(placeData.get(position).getCourseTracks());
         ((TextView) v.findViewById(R.id.cardPlaceReviewNum)).setText(placeData.get(position).getCourseTracks());

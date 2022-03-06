@@ -1,7 +1,9 @@
 package com.rnb.chauffeur;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ActionMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -22,6 +24,10 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        assert getSupportActionBar() != null;   //null check
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("ROOM");
 
         // on below line we are initializing our array list and swipe deck.
         placeModalArrayList = new ArrayList<>();
@@ -58,6 +64,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
             public void cardsDepleted() {
                 // this method is called when no card is present
                 Toast.makeText(SearchActivity.this, "No more courses present", Toast.LENGTH_SHORT).show();
+                startActivity( new Intent(SearchActivity.this, VictoryActivity.class));
             }
 
             @Override
@@ -89,5 +96,11 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
                 cardStack.swipeTopCardLeft(1000);
                 break;
         }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 }
