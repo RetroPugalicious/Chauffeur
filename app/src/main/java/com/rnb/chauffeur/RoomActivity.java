@@ -45,11 +45,6 @@ public class RoomActivity extends AppCompatActivity {
 
         if(role.equals("Member")) {
             Room myRoom = new Room();
-            try {
-                roomcode = myRoom.createRoom();
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            }
             int index = 0;
             try {
                 index = myRoom.joinRoom(roomcode);
@@ -123,22 +118,5 @@ public class RoomActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         finish();
         return true;
-    }
-
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.aeCheckbox:
-                if (checked)
-                    // Pirates are the best
-                    break;
-            case R.id.bsCheckbox:
-                if (checked)
-
-                break;
-        }
     }
 }

@@ -16,14 +16,14 @@
 
         <!--image view for place image-->
         <ImageView
-            android:id="@+id/cardPlaceImage"
+            android:id="@+id/victoryPlaceImage"
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:scaleType="centerCrop" />
 
         <!--text view for our place name-->
         <TextView
-            android:id="@+id/cardPlaceName"
+            android:id="@+id/victoryPlaceName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="3dp"
@@ -38,17 +38,17 @@
 
             <!--text view for our place rating-->
             <TextView
-                android:id="@+id/cardPlaceRating"
+                android:id="@+id/victoryPlaceDistance"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="3dp"
-                android:text="@string/rating"
+                android:text="@string/distance"
                 android:textColor="@color/black" />
 
             <!--text view for our place price-->
             <TextView
-                android:id="@+id/cardPlacePrice"
+                android:id="@+id/victoryPlacePrice"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -65,34 +65,24 @@
 
             <!--text view for our place review number-->
             <TextView
-                android:id="@+id/cardPlaceReviewNum"
+                android:id="@+id/victoryPlaceAddress"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="3dp"
-                android:text="@string/number_of_reviews"
+                android:text="@string/address"
                 android:textColor="@color/black" />
 
             <!--text view for our place alias-->
             <TextView
-                android:id="@+id/cardPlaceAlias"
+                android:id="@+id/victoryPlacePhoneNumber"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="3dp"
-                android:text="@string/alias"
+                android:text="@string/phonenum"
                 android:textColor="@color/black" />
         </LinearLayout>
-
-        <!--text view for our place description-->
-        <TextView
-            android:id="@+id/cardPlaceDistance"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:padding="3dp"
-            android:text="@string/description"
-            android:textColor="@color/black" />
 
     </LinearLayout>
 

@@ -33,6 +33,8 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     String location;
     String criteria;
     int radius;
+    int index = 0;
+    String distance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,13 +76,15 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
                 business = businesses.getJSONObject(i);
                 double away = Double.parseDouble(business.get("distance").toString());
                 away = away/1069;
-                String distance = String.format("%.2f miles", away);
+                distance = String.format("%.2f miles", away);
                 PlaceModal newCard = new PlaceModal(business.get("name").toString(),
                         ("Rating: " + business.get("rating").toString()),
                         ("Total Reviews: " + business.get("review_count").toString()),
                         distance,
                         business.get("image_url").toString(),
-                        ("Price: " + business.get("price").toString()));
+                        ("Price: " + business.get("price").toString()),
+                        business.get("display_phone").toString(),
+                        business.get("alias").toString());
                 placeModalArrayList.add(newCard);
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -99,12 +103,23 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
             public void cardSwipedLeft(int position) {
                 // on card swipe left we are displaying a toast message.
                 Toast.makeText(SearchActivity.this, "Voted No", Toast.LENGTH_SHORT).show();
+                index++;
             }
 
             @Override
             public void cardSwipedRight(int position) {
                 // on card swiped to right we are displaying a toast message.
                 Toast.makeText(SearchActivity.this, "Voted Yes", Toast.LENGTH_SHORT).show();
+                Intent i1 = new Intent(SearchActivity.this, VictoryActivity.class);
+                Bundle bundle1 = new Bundle();
+                bundle1.putString("victoryImage", placeModalArrayList.get(index).getImgURL());
+                bundle1.putString("victoryName", placeModalArrayList.get(index).getPlaceName());
+                bundle1.putString("victoryDistance", distance);
+                bundle1.putString("victoryPrice", placeModalArrayList.get(index).getPlacePrice());
+                bundle1.putString("victoryPhone", placeModalArrayList.get(index).getPhone());
+                bundle1.putString("victoryAddress", placeModalArrayList.get(index).getAddress());
+                i1.putExtras(bundle1);
+                startActivity(i1);
             }
 
             @Override

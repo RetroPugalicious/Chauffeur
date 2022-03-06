@@ -74,14 +74,14 @@ public class MemberFragment extends Fragment {
                 try {
                     members.setText(getResources().getText(R.string.members) + " " + String.valueOf(Room.getUsers(roomcode)));
                     //Determine when the leader is ready
-                    if(startCheck(roomcode)) {
+                    /*if(startCheck(roomcode)) {
                         Intent i1 = new Intent(getActivity(), SearchActivity.class);
                         Bundle bundle1 = new Bundle();
                         bundle1.putString("ROOM", roomcode);
                         i1.putExtras(bundle1);
                         startActivity(i1);
-                    }
-                } catch (IOException | JSONException e) {
+                    }*/
+                } catch (IOException /*| JSONException*/ e) {
                     e.printStackTrace();
                 }
             }

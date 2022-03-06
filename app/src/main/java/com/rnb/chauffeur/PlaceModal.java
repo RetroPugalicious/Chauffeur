@@ -8,6 +8,8 @@ public class PlaceModal {
     private String placeDistance;
     private String placePrice;
     private String imgURL;
+    private String phone;
+    private String address;
 
     public String getImgURL() {
         return imgURL;
@@ -58,13 +60,31 @@ public class PlaceModal {
         this.placePrice = placePrice;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     // constructor.
-    public PlaceModal(String placeName, String placeRating, String placeReviewNum, String placeDistance, String imgURL, String placePrice) {
+    public PlaceModal(String placeName, String placeRating, String placeReviewNum, String placeDistance, String imgURL, String placePrice, String phone, String address) {
         this.placeName = placeName;
         this.placeRating = placeRating;
         this.placeReviewNum = placeReviewNum;
         this.placeDistance = placeDistance;
         this.imgURL = imgURL;
         this.placePrice = placePrice;
+        this.phone = phone;
+        this.address = address;
     }
 }
