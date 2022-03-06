@@ -1,7 +1,5 @@
 package com.rnb.chauffeur;
 
-import android.graphics.drawable.Drawable;
-
 public class PlaceModal {
 
     // variables for our coursename,
