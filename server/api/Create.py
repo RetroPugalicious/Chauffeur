@@ -24,5 +24,4 @@ class Create(Resource):
 
         self.rooms[roomname] = new_room
 
-        return new_room
         return roomname
