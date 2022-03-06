@@ -3,7 +3,31 @@
     <string name="app_description">Let us show you around!</string>
     <string name="soloStart">Solo</string>
     <string name="partyStart">Party</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="rangeSelection">How far do you want to travel?</string>
+    <string name="PLACEHOLDER">PLACEHOLDER</string>
+    <string name="roomCodeHint">Room Code</string>
+    <string name="enterCodePrompt">Enter Party Room Code</string>
+    <string name="join_party">Join Party</string>
+    <string name="error">ERROR</string>
+    <string name="waiting_for_leader">Waiting for leader…</string>
+    <string name="leader">Leader:</string>
+    <string name="members">Members:</string>
+    <string name="entertainment_categories">Entertainment Categories</string>
+    <string name="arts_amp_entertainment"><![CDATA[Arts & Entertainment]]></string>
+    <string name="beauty_amp_spas"><![CDATA[Beauty & Spas]]></string>
+    <string name="food">Food</string>
+    <string name="nightlife">Nightlife</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="shopping">Shopping</string>
+    <string name="begin_search">Begin Search</string>
+    <string name="number_of_reviews">Number of Reviews</string>
+    <string name="price">Price</string>
+    <string name="rating">Rating</string>
+    <string name="place_name">Place Name</string>
+    <string name="alias">Alias</string>
+    <string name="description">Description</string>
+    <string name="distance">Distance</string>
+    <string name="miles">" miles"</string>
+    <string name="ten_miles">10 miles</string>
 </resources>
