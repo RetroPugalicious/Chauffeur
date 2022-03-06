@@ -19,8 +19,7 @@ class Create(Resource):
                     'user_count': 0,
                     'params': {},
                     'api_results': {},
-                    'user_responses': [0][0],
-                    'user_api_calls': []}
+                    'user_responses': {}}
 
         self.rooms[roomname] = new_room
 
