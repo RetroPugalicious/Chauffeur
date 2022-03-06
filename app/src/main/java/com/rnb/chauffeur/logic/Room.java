@@ -1,6 +1,8 @@
 package com.rnb.chauffeur.logic;
 
-import static java.lang.Integer.getInteger;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,8 +10,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
-import javax.net.ssl.HttpsURLConnection;
+import java.util.Dictionary;
 
 public class Room {
 
@@ -208,6 +209,53 @@ public class Room {
         while(true) {
             if (!thread.isAlive()) {
                 return roomIndex[0];
+            }
+        }
+    }
+
+
+    public static boolean startCheck(String roomNumber) throws MalformedURLException, JSONException {
+
+        String url = "http://192.168.254.69:5000/statusCheck/" + roomNumber;
+        URL url1 = new URL(url);
+
+        final JSONObject[] status = new JSONObject[1];
+
+        Thread thread = new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                try  {
+                    HttpURLConnection con = (HttpURLConnection)url1.openConnection();
+                    con.setRequestMethod("GET");
+                    //add request header
+                    con.setRequestProperty("User-Agent", "Mozilla/5.0");
+                    int responseCode = con.getResponseCode();
+                    System.out.println("\nSending 'GET' request to URL : " + url);
+                    System.out.println("Response Code : " + responseCode);
+                    BufferedReader in = new BufferedReader(
+                            new InputStreamReader(con.getInputStream()));
+                    String inputLine;
+                    while ((inputLine = in.readLine()) != null) {
+                        status[0] = new JSONObject(inputLine);
+                    }
+                    System.out.println("Index: " + status[0]);
+                    in.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        JSONArray requestArray = status[0].getJSONArray("results");
+
+        System.out.println("Return Response: " + requestArray.get(2));
+
+        thread.start();
+
+        while(true) {
+            if (!thread.isAlive()) {
+                return requestArray.get(2) != "";
             }
         }
     }

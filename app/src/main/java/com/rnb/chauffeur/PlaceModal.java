@@ -2,8 +2,6 @@ package com.rnb.chauffeur;
 
 public class PlaceModal {
 
-    // variables for our coursename,
-    // description,tracks and duration,imageId.
     private String placeName;
     private String placeRating;
     private String placeReviewNum;
