@@ -5,14 +5,10 @@ if __name__ == '__main__':
     import json
 
     # get our keys
-    api_key = ""
-    client_id = ""
     with open('../api.key') as f:
         API_KEY = f.readlines()
-    print(API_KEY)
     with open('../client.ID') as f:
         client_id = f.readlines()
-    print(client_id)
 
     # define endpoint and header
     ENDPOINT = 'https://api.yelp.com/v3/businesses/search'
@@ -30,4 +26,6 @@ if __name__ == '__main__':
     # convert json string to dictionary
     business_data = response.json()
 
-    print(business_data)
+    # print(business_data)
+    for biz in business_data['businesses']:
+        print(biz)
