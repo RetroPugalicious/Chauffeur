@@ -46,4 +46,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test:runner:1.5.0-alpha01'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0-alpha04'
+    implementation 'com.daprlabs.aaron:cardstack:0.3.1-beta0'
 }
