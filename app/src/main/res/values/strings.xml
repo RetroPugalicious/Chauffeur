@@ -30,4 +30,6 @@
     <string name="distance">Distance</string>
     <string name="miles">" miles"</string>
     <string name="ten_miles">10 miles</string>
+    <string name="address">Address</string>
+    <string name="phonenum">Phone Number</string>
 </resources>

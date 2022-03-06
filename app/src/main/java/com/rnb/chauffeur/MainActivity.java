@@ -8,6 +8,8 @@ import android.widget.Button;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.rnb.chauffeur.logic.User;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.solo:
                 Intent i = new Intent(MainActivity.this, RoomActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("role", "Leader");
+                bundle.putString("ROLE", "Solo");
                 i.putExtras(bundle);
                 startActivity(i);
                 break;
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .setPositiveButton("Create", (dialog, id) -> {
                             Intent i1 = new Intent(MainActivity.this, RoomActivity.class);
                             Bundle bundle1 = new Bundle();
-                            bundle1.putString("role", "Leader");
+                            bundle1.putString("ROLE", "Leader");
                             i1.putExtras(bundle1);
                             startActivity(i1);
                         })

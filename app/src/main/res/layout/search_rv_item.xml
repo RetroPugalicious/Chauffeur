@@ -29,7 +29,7 @@
             android:padding="3dp"
             android:text="@string/place_name"
             android:textColor="@color/black"
-            android:textSize="50sp"
+            android:textSize="30sp"
             />
 
         <!--text view for our place distance-->
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="3dp"
-                android:text="@string/alias"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 />

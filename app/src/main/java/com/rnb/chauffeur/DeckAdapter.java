@@ -52,12 +52,11 @@ public class DeckAdapter extends BaseAdapter {
             v = LayoutInflater.from(parent.getContext()).inflate(R.layout.search_rv_item, parent, false);
         }
         // on below line we are initializing our variables and setting data to our variables.
-        ((TextView) v.findViewById(R.id.cardPlaceName)).setText(placeData.get(position).getCourseName());
-        ((TextView) v.findViewById(R.id.cardPlaceDistance)).setText(placeData.get(position).getCourseDescription());
-        ((TextView) v.findViewById(R.id.cardPlaceRating)).setText(placeData.get(position).getCourseDuration());
-        ((TextView) v.findViewById(R.id.cardPlacePrice)).setText(placeData.get(position).getCourseTracks());
-        ((TextView) v.findViewById(R.id.cardPlaceReviewNum)).setText(placeData.get(position).getCourseTracks());
-        ((TextView) v.findViewById(R.id.cardPlaceAlias)).setText(placeData.get(position).getCourseTracks());
+        ((TextView) v.findViewById(R.id.cardPlaceName)).setText(placeData.get(position).getPlaceName());
+        ((TextView) v.findViewById(R.id.cardPlaceDistance)).setText(placeData.get(position).getPlaceDistance());
+        ((TextView) v.findViewById(R.id.cardPlaceRating)).setText(placeData.get(position).getPlaceRating());
+        ((TextView) v.findViewById(R.id.cardPlacePrice)).setText(placeData.get(position).getPlacePrice());
+        ((TextView) v.findViewById(R.id.cardPlaceReviewNum)).setText(placeData.get(position).getPlaceReviewNum());
         Picasso.get().load(placeData.get(position).getImgURL()).into((ImageView) v.findViewById(R.id.cardPlaceImage));
         return v;
     }
