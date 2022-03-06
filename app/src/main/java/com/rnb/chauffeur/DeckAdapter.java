@@ -8,31 +8,33 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class DeckAdapter extends BaseAdapter {
 
     // on below line we have created variables
     // for our array list and context.
-    private ArrayList<CourseModal> courseData;
+    private ArrayList<PlaceModal> placeData;
     private Context context;
 
     // on below line we have created constructor for our variables.
-    public DeckAdapter(ArrayList<CourseModal> courseData, Context context) {
-        this.courseData = courseData;
+    public DeckAdapter(ArrayList<PlaceModal> placeData, Context context) {
+        this.placeData = placeData;
         this.context = context;
     }
 
     @Override
     public int getCount() {
         // in get count method we are returning the size of our array list.
-        return courseData.size();
+        return placeData.size();
     }
 
     @Override
     public Object getItem(int position) {
         // in get item method we are returning the item from our array list.
-        return courseData.get(position);
+        return placeData.get(position);
     }
 
     @Override
@@ -50,11 +52,13 @@ public class DeckAdapter extends BaseAdapter {
             v = LayoutInflater.from(parent.getContext()).inflate(R.layout.search_rv_item, parent, false);
         }
         // on below line we are initializing our variables and setting data to our variables.
-        ((TextView) v.findViewById(R.id.idTVCourseName)).setText(courseData.get(position).getCourseName());
-        ((TextView) v.findViewById(R.id.idTVCourseDescription)).setText(courseData.get(position).getCourseDescription());
-        ((TextView) v.findViewById(R.id.idTVCourseDuration)).setText(courseData.get(position).getCourseDuration());
-        ((TextView) v.findViewById(R.id.idTVCourseTracks)).setText(courseData.get(position).getCourseTracks());
-        ((ImageView) v.findViewById(R.id.idIVCourse)).setImageResource(courseData.get(position).getImgId());
+        ((TextView) v.findViewById(R.id.cardPlaceName)).setText(placeData.get(position).getCourseName());
+        ((TextView) v.findViewById(R.id.cardPlaceDescription)).setText(placeData.get(position).getCourseDescription());
+        ((TextView) v.findViewById(R.id.cardPlaceRating)).setText(placeData.get(position).getCourseDuration());
+        ((TextView) v.findViewById(R.id.cardPlacePrice)).setText(placeData.get(position).getCourseTracks());
+        ((TextView) v.findViewById(R.id.cardPlaceReviewNum)).setText(placeData.get(position).getCourseTracks());
+        ((TextView) v.findViewById(R.id.cardPlaceAlias)).setText(placeData.get(position).getCourseTracks());
+        Picasso.get().load(placeData.get(position).getImgURL()).into((ImageView) v.findViewById(R.id.cardPlaceImage));
         return v;
     }
 }

@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2388888888888889" />
+        <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/drawable/test.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/layout/activity_room.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/layout/activity_room_join.xml" value="0.264" />
+        <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/layout/activity_search_activity.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/layout/activity_search_avtivity.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/layout/fragment_business_type.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />

@@ -21,4 +21,10 @@
     <string name="restaurants">Restaurants</string>
     <string name="shopping">Shopping</string>
     <string name="begin_search">Begin Search</string>
+    <string name="number_of_reviews">Number of Reviews</string>
+    <string name="price">Price</string>
+    <string name="rating">Rating</string>
+    <string name="place_name">Place Name</string>
+    <string name="alias">Alias</string>
+    <string name="description">Description</string>
 </resources>

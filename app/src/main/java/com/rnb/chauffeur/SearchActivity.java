@@ -2,6 +2,8 @@ package com.rnb.chauffeur;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,30 +12,30 @@ import com.daprlabs.cardstack.SwipeDeck;
 
 import java.util.ArrayList;
 
-public class SearchActivity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity implements View.OnClickListener{
     // on below line we are creating variable
     // for our array list and swipe deck.
     private SwipeDeck cardStack;
-    private ArrayList<CourseModal> courseModalArrayList;
+    private ArrayList<PlaceModal> placeModalArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_activity);
+        setContentView(R.layout.activity_search);
 
         // on below line we are initializing our array list and swipe deck.
-        courseModalArrayList = new ArrayList<>();
+        placeModalArrayList = new ArrayList<>();
         cardStack = (SwipeDeck) findViewById(R.id.swipe_deck);
 
         // on below line we are adding data to our array list.
-        courseModalArrayList.add(new CourseModal("C++", "30 days", "20 Tracks", "C++ Self Paced Course", R.drawable.ic_launcher_foreground));
-        courseModalArrayList.add(new CourseModal("Java", "30 days", "20 Tracks", "Java Self Paced Course", R.drawable.ic_launcher_foreground));
-        courseModalArrayList.add(new CourseModal("Python", "30 days", "20 Tracks", "Python Self Paced Course", R.drawable.ic_launcher_foreground));
-        courseModalArrayList.add(new CourseModal("DSA", "30 days", "20 Tracks", "DSA Self Paced Course", R.drawable.ic_launcher_foreground));
-        courseModalArrayList.add(new CourseModal("PHP", "30 days", "20 Tracks", "PHP Self Paced Course", R.drawable.ic_launcher_foreground));
+        placeModalArrayList.add(new PlaceModal("C++", "30 days", "20 Tracks", "C++ Self Paced Course", "https://i.imgur.com/DvpvklR.png"));
+        placeModalArrayList.add(new PlaceModal("Java", "30 days", "20 Tracks", "Java Self Paced Course", "https://s3-media3.fl.yelpcdn.com/bphoto/H7v8lwod_6bzB7i8gkGznA/o.jpg"));
+        placeModalArrayList.add(new PlaceModal("Python", "30 days", "20 Tracks", "Python Self Paced Course", "https://s3-media1.fl.yelpcdn.com/bphoto/aG4fcmhjWLZLroFHUqqLBQ/o.jpg"));
+        placeModalArrayList.add(new PlaceModal("DSA", "30 days", "20 Tracks", "DSA Self Paced Course", "https://i.imgur.com/DvpvklR.png"));
+        placeModalArrayList.add(new PlaceModal("PHP", "30 days", "20 Tracks", "PHP Self Paced Course", "https://i.imgur.com/DvpvklR.png"));
 
         // on below line we are creating a variable for our adapter class and passing array list to it.
-        final DeckAdapter adapter = new DeckAdapter(courseModalArrayList, this);
+        final DeckAdapter adapter = new DeckAdapter(placeModalArrayList, this);
 
         // on below line we are setting adapter to our card stack.
         cardStack.setAdapter(adapter);
@@ -70,5 +72,22 @@ public class SearchActivity extends AppCompatActivity {
                 Log.i("TAG", "CARDS MOVED UP");
             }
         });
+
+        Button acceptButton = (Button) findViewById(R.id.acceptButton);
+        acceptButton.setOnClickListener(this);
+        Button rejectButton = (Button) findViewById(R.id.rejectButton);
+        rejectButton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.acceptButton:
+                cardStack.swipeTopCardRight(1000);
+                break;
+            case R.id.rejectButton:
+                cardStack.swipeTopCardLeft(1000);
+                break;
+        }
     }
 }

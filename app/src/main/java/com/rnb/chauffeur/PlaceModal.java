@@ -1,6 +1,8 @@
 package com.rnb.chauffeur;
 
-public class CourseModal {
+import android.graphics.drawable.Drawable;
+
+public class PlaceModal {
 
     // variables for our coursename,
     // description,tracks and duration,imageId.
@@ -8,16 +10,15 @@ public class CourseModal {
     private String courseDuration;
     private String courseTracks;
     private String courseDescription;
+    private String imgURL;
 
-    public int getImgId() {
-        return imgId;
+    public String getImgURL() {
+        return imgURL;
     }
 
-    public void setImgId(int imgId) {
-        this.imgId = imgId;
+    public void setImgURL(String url) {
+        this.imgURL = url;
     }
-
-    private int imgId;
 
     // creating getter and setter methods
     public String getCourseName() {
@@ -53,11 +54,11 @@ public class CourseModal {
     }
 
     // constructor.
-    public CourseModal(String courseName, String courseDuration, String courseTracks, String courseDescription, int imgId) {
+    public PlaceModal(String courseName, String courseDuration, String courseTracks, String courseDescription, String imgURL) {
         this.courseName = courseName;
         this.courseDuration = courseDuration;
         this.courseTracks = courseTracks;
         this.courseDescription = courseDescription;
-        this.imgId = imgId;
+        this.imgURL = imgURL;
     }
 }
