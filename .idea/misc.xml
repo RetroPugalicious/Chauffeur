@@ -18,10 +18,11 @@
         <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/layout/fragment_member.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/layout/room_code_dialog.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/layout/search_rv_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/nws68/AndroidStudioProjects/Chauffeur/app/src/main/res/xml/network_security_config.xml" value="0.13020833333333334" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (Chauffeur)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
   <component name="ProjectType">
     <option name="id" value="Android" />
   </component>

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class RoomJoinActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -24,9 +25,12 @@ public class RoomJoinActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View view) {
+        EditText roomcode = findViewById(R.id.roomCodeEditText);
+
         Intent i = new Intent(RoomJoinActivity.this, RoomActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putString("role", "Member");
+        bundle.putString("ROLE", "Member");
+        bundle.putString("roomcode", String.valueOf(roomcode.getText()));
         i.putExtras(bundle);
         startActivity(i);
     }

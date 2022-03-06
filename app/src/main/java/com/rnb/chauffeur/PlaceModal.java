@@ -4,10 +4,11 @@ public class PlaceModal {
 
     // variables for our coursename,
     // description,tracks and duration,imageId.
-    private String courseName;
-    private String courseDuration;
-    private String courseTracks;
-    private String courseDescription;
+    private String placeName;
+    private String placeRating;
+    private String placeReviewNum;
+    private String placeDistance;
+    private String placePrice;
     private String imgURL;
 
     public String getImgURL() {
@@ -19,44 +20,53 @@ public class PlaceModal {
     }
 
     // creating getter and setter methods
-    public String getCourseName() {
-        return courseName;
+    public String getPlaceName() {
+        return placeName;
     }
 
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
+    public void setPlaceName(String placeName) {
+        this.placeName = placeName;
     }
 
-    public String getCourseDuration() {
-        return courseDuration;
+    public String getPlaceRating() {
+        return placeRating;
     }
 
-    public void setCourseDuration(String courseDuration) {
-        this.courseDuration = courseDuration;
+    public void setPlaceRating(String placeRating) {
+        this.placeRating = placeRating;
     }
 
-    public String getCourseTracks() {
-        return courseTracks;
+    public String getPlaceReviewNum() {
+        return placeReviewNum;
     }
 
-    public void setCourseTracks(String courseTracks) {
-        this.courseTracks = courseTracks;
+    public void setPlaceReviewNum(String placeReviewNum) {
+        this.placeReviewNum = placeReviewNum;
     }
 
-    public String getCourseDescription() {
-        return courseDescription;
+    public String getPlaceDistance() {
+        return placeDistance;
     }
 
-    public void setCourseDescription(String courseDescription) {
-        this.courseDescription = courseDescription;
+    public void setPlaceDistance(String placeDistance) {
+        this.placeDistance = placeDistance;
+    }
+
+    public String getPlacePrice() {
+        return placePrice;
+    }
+
+    public void setPlacePrice(String placePrice) {
+        this.placePrice = placePrice;
     }
 
     // constructor.
-    public PlaceModal(String courseName, String courseDuration, String courseTracks, String courseDescription, String imgURL) {
-        this.courseName = courseName;
-        this.courseDuration = courseDuration;
-        this.courseTracks = courseTracks;
-        this.courseDescription = courseDescription;
+    public PlaceModal(String placeName, String placeRating, String placeReviewNum, String placeDistance, String imgURL, String placePrice) {
+        this.placeName = placeName;
+        this.placeRating = placeRating;
+        this.placeReviewNum = placeReviewNum;
+        this.placeDistance = placeDistance;
         this.imgURL = imgURL;
+        this.placePrice = placePrice;
     }
 }

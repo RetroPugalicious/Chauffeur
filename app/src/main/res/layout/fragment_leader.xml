@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/leaderLayout"
     >
 
     <TextView
@@ -54,54 +55,46 @@
         app:layout_constraintTop_toBottomOf="@id/rangeDisplay"
         app:layout_constraintVertical_bias="0.01" />
 
-    <CheckBox
-        android:id="@+id/aeCheckbox"
+    <RadioGroup
+        android:id="@+id/categoryGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/arts_amp_entertainment"
+        android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/entertainmentCategories"/>
-    <CheckBox
-        android:id="@+id/bsCheckbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/beauty_amp_spas"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/aeCheckbox"/>
-    <CheckBox
-        android:id="@+id/fCheckbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/food"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bsCheckbox"/>
-    <CheckBox
-        android:id="@+id/nCheckbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/nightlife"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fCheckbox"/>
-    <CheckBox
-        android:id="@+id/rCheckbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/restaurants"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nCheckbox"/>
-    <CheckBox
-        android:id="@+id/sCheckbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/shopping"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rCheckbox"/>
+        app:layout_constraintTop_toBottomOf="@id/entertainmentCategories"
+        >
+        <RadioButton android:id="@+id/aeCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arts_amp_entertainment"
+            />
+        <RadioButton android:id="@+id/bsCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/beauty_amp_spas"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/fCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/food"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/nCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nightlife"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/rCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restaurants"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/sCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shopping"
+            android:onClick="onRadioButtonClicked"/>
+</RadioGroup>
 
     <Button
         android:id="@+id/beginSearchButton"
@@ -109,13 +102,14 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sCheckbox"
+        app:layout_constraintTop_toBottomOf="@id/categoryGroup"
         android:text="@string/begin_search"
         >
     </Button>
 
     <TextView
         android:id="@+id/leaderList"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
