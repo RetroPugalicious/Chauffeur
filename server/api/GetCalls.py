@@ -12,4 +12,4 @@ class GetCalls(Resource):
         :return:
         """
         room_info = self.rooms[room]
-        return room_info['api_calls'] != {}
+        return room_info['api_results'] != {}

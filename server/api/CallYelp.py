@@ -24,10 +24,9 @@ class CallYelp(Resource):
                                'radius': radius,
                                'location': location}
 
-        # get our keys
-        with open('../api.key') as f:
+        with open('api.key') as f:
             API_KEY = f.readlines()
-        with open('../client.ID') as f:
+        with open('client.ID') as f:
             client_id = f.readlines()
 
         # define endpoint and header
@@ -46,24 +45,7 @@ class CallYelp(Resource):
         i = 0
         for business in businesses:
             business_list[i] = business
-
-        # pages = {
-        #     '1': {'0': business_data['businesses'][0], '1': business_data['businesses'][1], '2': business_data['businesses'][2], '3': business_data['businesses'][3],
-        #           '4': business_data['businesses'][4], '5': business_data['businesses'][5], '6': business_data['businesses'][6], '7': business_data['businesses'][7],
-        #           '8': business_data['businesses'][8], '9': business_data['businesses'][9]},
-        #     '2': {'0': business_data['businesses'][10], '1': business_data['businesses'][11], '2': business_data['businesses'][12], '3': business_data['businesses'][13],
-        #           '4': business_data['businesses'][14], '5': business_data['businesses'][15], '6': business_data['businesses'][16], '7': business_data['businesses'][17],
-        #           '8': business_data['businesses'][18], '9': business_data['businesses'][19]},
-        #     '3': {'0': business_data['businesses'][20], '1': business_data['businesses'][21], '2': business_data['businesses'][22], '3': business_data['businesses'][23],
-        #           '4': business_data['businesses'][24], '5': business_data['businesses'][25], '6': business_data['businesses'][26], '7': business_data['businesses'][27],
-        #           '8': business_data['businesses'][28], '9': business_data['businesses'][29]},
-        #     '4': {'0': business_data['businesses'][30], '1': business_data['businesses'][31], '2': business_data['businesses'][32], '3': business_data['businesses'][33],
-        #           '4': business_data['businesses'][34], '5': business_data['businesses'][35], '6': business_data['businesses'][36], '7': business_data['businesses'][37],
-        #           '8': business_data['businesses'][38], '9': business_data['businesses'][39]},
-        #     '5': {'0': business_data['businesses'][40], '1': business_data['businesses'][41], '2': business_data['businesses'][42], '3': business_data['businesses'][43],
-        #           '4': business_data['businesses'][44], '5': business_data['businesses'][45], '6': business_data['businesses'][46], '7': business_data['businesses'][47],
-        #           '8': business_data['businesses'][48], '9': business_data['businesses'][49]}
-        # }
+            i = i + 1
 
         room_info['api_results'] = business_list
 
