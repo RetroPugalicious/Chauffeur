@@ -5,9 +5,9 @@ if __name__ == '__main__':
     import json
 
     # get our keys
-    with open('../api.key') as f:
+    with open('api.key') as f:
         API_KEY = f.readlines()
-    with open('../client.ID') as f:
+    with open('client.ID') as f:
         client_id = f.readlines()
 
     # define endpoint and header

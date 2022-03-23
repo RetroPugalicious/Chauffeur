@@ -28,4 +28,4 @@ api.add_resource(PageCall, '/display/<string:room>', resource_class_kwargs={'roo
 api.add_resource(GetCalls, '/getCalls/<string:room>', resource_class_kwargs={'rooms':  room_list})
 
 if __name__ == '__main__':
-    app.run(debug=False, host="0.0.0.0")
+    app.run(host="0.0.0.0", debug=False, ssl_context='adhoc')

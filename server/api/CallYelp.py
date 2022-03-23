@@ -1,3 +1,5 @@
+import os
+
 import requests
 from flask_restful import Resource
 

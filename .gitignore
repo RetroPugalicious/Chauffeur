@@ -13,5 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
-api.key
-client.ID
+server/api.key
+server/client.ID
